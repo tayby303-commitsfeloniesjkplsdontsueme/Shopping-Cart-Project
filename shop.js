@@ -115,31 +115,16 @@ const stat = PokeBalls.filter(ball=>ball.category === "Statistic")
 
 const species = PokeBalls.filter(ball=>ball.category === "Species")
 
-standard.forEach(ball => {
-    if (ball.name) console.log(ball.name);
-    else console.log("[Error: No Name]")
-});
-standard.forEach(ball => {
-    if (ball.name) console.log(ball.name);
-    else console.log("[Error: No Name]")
-});
-standard.forEach(ball => {
-    if (ball.name) console.log(ball.name);
-    else console.log("[Error: No Name]")
-});
-standard.forEach(ball => {
-    if (ball.name) console.log(ball.name);
-    else console.log("[Error: No Name]")
-});
-standard.forEach(ball => {
-    if (ball.name) console.log(ball.name);
-    else console.log("[Error: No Name]")
-});
-standard.forEach(ball => {
-    if (ball.name) console.log(ball.name);
-    else console.log("[Error: No Name]")
-});
-stanspdard.forEach(ball => {
-    if (ball.name) console.log(ball.name);
-    else console.log("[Error: No Name]")
-});
+function sort(balls){
+    console.log(`${}:`)
+    balls.forEach(ball => {
+        if (ball.name) console.log(ball.name);
+        else console.log("[Error: No Name]");
+    });
+}
+sort(standard)
+sort(time)
+sort(comfort)
+sort(enviro)
+sort(stat)
+sort(species)
