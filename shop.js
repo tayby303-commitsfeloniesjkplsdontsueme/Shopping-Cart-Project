@@ -100,31 +100,33 @@ const PokeBalls = [
         desc: "a pokeball  that works better on ultra-beasts"
     },
 ]
+const categories ={
+standa:{name: "Standard", balls: PokeBalls.filter(ball=>ball.category === "Standard")},
 
-const standard = PokeBalls.filter(ball=>ball.category === "Standard")
+guaran:{name: "Guaranteed", balls: PokeBalls.filter(ball=>ball.category === "Guaranteed")},
 
-const guaranteed = PokeBalls.filter(ball=>ball.category === "Guaranteed")
+time:{name: "Time", balls: PokeBalls.filter(ball=>ball.category === "Time")},
 
-const time = PokeBalls.filter(ball=>ball.category === "Time")
+comfort:{name: "Comfort", balls: PokeBalls.filter(ball=>ball.category === "Comfort")},
 
-const comfort = PokeBalls.filter(ball=>ball.category === "Comfort")
+enviro:{name: "Environment", balls: PokeBalls.filter(ball=>ball.category === "Environment")},
 
-const enviro = PokeBalls.filter(ball=>ball.category === "Environment")
+stat:{name: "Statistic", balls: PokeBalls.filter(ball=>ball.category === "Statistic")},
 
-const stat = PokeBalls.filter(ball=>ball.category === "Statistic")
-
-const species = PokeBalls.filter(ball=>ball.category === "Species")
-
-function sort(balls){
-    console.log(`${}:`)
-    balls.forEach(ball => {
+species:{name: "Species", balls: PokeBalls.filter(ball=>ball.category === "Species")},
+}
+function sort(kategori){
+    console.log(`${kategori.name}:`)
+    kategori.balls.forEach(ball => {
         if (ball.name) console.log(ball.name);
         else console.log("[Error: No Name]");
     });
 }
-sort(standard)
-sort(time)
-sort(comfort)
-sort(enviro)
-sort(stat)
-sort(species)
+sort(categories.standa)
+sort(categories.guaran)
+sort(categories.time)
+sort(categories.comfort)
+sort(categories.enviro)
+sort(categories.stat)
+sort(categories.species)
+const cart={}
