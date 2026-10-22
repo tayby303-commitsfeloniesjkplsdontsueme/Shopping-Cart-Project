@@ -129,4 +129,15 @@ sort(categories.comfort)
 sort(categories.enviro)
 sort(categories.stat)
 sort(categories.species)
+
 const cart={}
+function add2cart(item){
+    if (cart[item.name]){
+        cart[item.qty]++;
+    }else{
+        cart[item.name]=item;
+        cart[item.qty]=qty=0;
+    }
+}
+add2cart(PokeBalls[1])
+console.log(cart)
