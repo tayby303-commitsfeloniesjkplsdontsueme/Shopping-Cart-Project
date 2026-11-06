@@ -130,13 +130,22 @@ sort(categories.enviro)
 sort(categories.stat)
 sort(categories.species)
 
-function add2cart(item){
-    const cart={}
-    if (cart[item.name]){
-        cart[item.qty]++;
+class Cart{
+    constructor(){
+        this.content={};
+    }
+    add(item){
+    if (this[item.name]){
+        this["qty"]++;
     }else{
-        cart[item.name,item.qty]=item
+        this[item.name]=item
+        item.qty=1
     };
     return cart 
+    }
 }
-console.log(`Cart: ${add2cart(PokeBalls[1])}`)
+
+cart = Cart();
+cart2 = Cart();
+
+console.log(`Cart: ${add(categories.standa.balls[1])}`)

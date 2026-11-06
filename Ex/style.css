@@ -1,0 +1,21 @@
+html,
+body,
+* {
+    font-size:20px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+div{
+    width: 30px;
+    height: 55px;
+    margin: 2.5px 5px;
+    background-color: darkgoldenrod;
+h1{
+    color: #009574;
+    font-family: #2458FE;
+}
+}
+body{
+    background-color: #04f932;
+}
