@@ -122,30 +122,66 @@ function sort(kategori){
         else console.log("[Error: No Name]");
     });
 }
-sort(categories.standa)
+/* sort(categories.standa)
 sort(categories.guaran)
 sort(categories.time)
 sort(categories.comfort)
 sort(categories.enviro)
 sort(categories.stat)
-sort(categories.species)
+sort(categories.species) */
 
 class Cart{
     constructor(){
         this.content={};
     }
     add(item){
-    if (this[item.name]){
-        this["qty"]++;
+    if (this.content[item.name]){
+        this.content[item.name]["qty"]++;
     }else{
-        this[item.name]=item
-        item.qty=1
+        this.content[item.name]=item
+        this.content[item.name]["qty"]=1
     };
     return cart 
     }
 }
 
-cart = Cart();
-cart2 = Cart();
+const cart = new Cart();
+const cart2 = new Cart();
 
-console.log(`Cart: ${add(categories.standa.balls[1])}`)
+cart.add(categories.standa.balls[1])
+console.log(`Cart: ${cart.content}`)
+const box = document.querySelector(".box");
+box.style.backgroundColor = "red";
+const header = document.getElementById("color");
+const btn = document.querySelector("#btn");
+let x = 0;
+
+function rgb() {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+  header.textContent = `Clicked ${x} rgb(${r}, ${g}, ${b})`;
+}
+function inject(item) {
+  const container = document.querySelector(".container");
+  container.insertAdjacentHTML(
+    "beforeend",
+    `<div class="card">
+        <h2 class="card-header">${item.name}</h2>
+        <img src="${item.img}" alt="" />
+        <p>filler filler filler</p>
+      </div> `,
+  );
+}
+inject("Mason");
+
+btn.addEventListener("click", function () {
+  x++;
+  rgb();
+});
+
+//make 1 html card, comment it out
+//select the container
+//forEach on items to inject to screen
+//select add cart buttons
