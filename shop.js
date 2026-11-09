@@ -136,10 +136,10 @@ class Cart{
     }
     add(item){
     if (this[item.name]){
-        this["qty"]++;
+        this[qty]++;
     }else{
-        this[item.name]=item
-        item.qty=1
+        this[item.name]=item;
+							this[item.name][qty]=1
     };
     return cart 
     }
