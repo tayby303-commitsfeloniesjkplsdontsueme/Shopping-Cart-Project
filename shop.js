@@ -137,51 +137,40 @@ class Cart{
     add(item){
     if (this.content[item.name]){
         this.content[item.name]["qty"]++;
-    }else{
-        this.content[item.name]=item
-        this.content[item.name]["qty"]=1
-    };
-    return cart 
+    }
+    else{
+        this.content[item["name"]]=item
+        this.content[item["name"]]["qty"]=1
+    }
+    }
+    remove(item){
+        if (this.content[item.name]){
+            this.content[item.name]["qty"]--;
+        }
+        else{
+            console.log("ERROR: Item not found!")
+        }
     }
 }
 
 const cart = new Cart();
 const cart2 = new Cart();
 
-cart.add(categories.standa.balls[1])
-console.log(`Cart: ${cart.content}`)
-const box = document.querySelector(".box");
-box.style.backgroundColor = "red";
-const header = document.getElementById("color");
-const btn = document.querySelector("#btn");
-let x = 0;
-
-function rgb() {
-  let r = Math.floor(Math.random() * 256);
-  let g = Math.floor(Math.random() * 256);
-  let b = Math.floor(Math.random() * 256);
-  box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-  header.textContent = `Clicked ${x} rgb(${r}, ${g}, ${b})`;
+cart.add(PokeBalls[1])
+cart.add(PokeBalls[1])
+function showCart(crt){
+    console.log("Cart:")
+    console.log(crt.content)
 }
-function inject(item) {
-  const container = document.querySelector(".container");
-  container.insertAdjacentHTML(
-    "beforeend",
-    `<div class="card">
-        <h2 class="card-header">${item.name}</h2>
-        <img src="${item.img}" alt="" />
-        <p>filler filler filler</p>
-      </div> `,
-  );
+showCart(cart)
+cart.remove(PokeBalls[1])
+showCart(cart)
+
+const nameElement = document.getElementById("name");
+
+function displayName() {
+    if (index < 0 || index >= people.length) {
+        return "Invalid index";
+    }
+    return people[index].name;
 }
-inject("Mason");
-
-btn.addEventListener("click", function () {
-  x++;
-  rgb();
-});
-
-//make 1 html card, comment it out
-//select the container
-//forEach on items to inject to screen
-//select add cart buttons
