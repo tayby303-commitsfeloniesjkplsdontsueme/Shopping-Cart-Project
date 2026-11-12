@@ -151,6 +151,10 @@ class Cart{
             console.log("ERROR: Item not found!")
         }
     }
+    show(){
+        console.log("Cart:")
+        console.log(this.content)
+    }
 }
 
 const cart = new Cart();
@@ -158,19 +162,17 @@ const cart2 = new Cart();
 
 cart.add(PokeBalls[1])
 cart.add(PokeBalls[1])
-function showCart(crt){
-    console.log("Cart:")
-    console.log(crt.content)
-}
-showCart(cart)
-cart.remove(PokeBalls[1])
-showCart(cart)
+cart.show()
 
-const nameElement = document.getElementById("name");
-
-function displayName() {
-    if (index < 0 || index >= people.length) {
-        return "Invalid index";
-    }
-    return people[index].name;
+function inject(item){
+    const container = document.querySelector(".container");
+    container.insertAdjacentHTML(
+    "beforeend",
+    `<div class="box">
+        <h1 class="name">${item.name}</h1>
+        <h2 class="category">${item.category}</h2>
+        <p class="desc">${item.desc}</p>
+        <button class="price">$${item.price}</button>
+    </div>`,);
 }
+PokeBalls.forEach(ball=>inject(ball))
