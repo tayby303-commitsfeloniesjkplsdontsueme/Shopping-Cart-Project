@@ -1,26 +1,41 @@
 html,
-body,
+body
 * {
     font-size:20px;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+body {
+  background-color: #464646;
+}
 .box {
-  height: 30rem;
-  width: 25%;
+  height: 300px;
+  width: 100%;
   background-color: red;
-  margin: 3rem 0rem;
+  margin: 0.5rem 0rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content:baseline;
+  text-align: center;
 }
 .container {
   display: flex;
-  width: 50vw;
+  width: 100rem;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 3rem auto;
+  margin: 2rem auto;
   gap: 10%;
-  text-decoration-color: aliceblue;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem; /* space between items */
+}
+.name {
+  font-family: "Balthazar", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.price{
+  font-family: 'Courier New', Courier, monospace;
 }
