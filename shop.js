@@ -2,102 +2,122 @@ const PokeBalls = [
     {name: "poke ball",//1
         category: "Standard",
         price: 1,
-        desc: "a ball you throw at Pokemon to catch them"
+        desc: "a ball you throw at Pokemon to catch them",
+        img: "pokeball.webp"
     },
     {name: "great ball",//2
         category: "Standard",
         price: 10,
-        desc: "a more succesful pokeball"
+        desc: "a more succesful pokeball",
+        img: "greatball.webp"
     },
     {name: "ultra ball",//3\
         category: "Standard",
         price: 100,
-        desc: "a very successful pokeball"
+        desc: "a very successful pokeball",
+        img: "ultraball.webp"
     },
     {name: "master ball",//4
         category: "Guaranteed",
         price: 1000,
-        desc: "a 100% successful pokeball"
+        desc: "a 100% successful pokeball",
+        img: 
     },
     {name: "quick ball",//5
         category: "Time",
         price: 5,
-        desc: "a pokeball that works best as your first move"
+        desc: "a pokeball that works best as your first move",
+        img: 
     },
     {name: "timer ball",//6
         category: "Time",
         price: 5,
-        desc: "a pokeball that works better the longer the battle"
+        desc: "a pokeball that works better the longer the battle",
+        img: 
     },
     {name: "fast ball",//7
         category: "Time",
         price: 5,
-        desc: "a pokeball for pokemon whom will flee fast"
+        desc: "a pokeball for pokemon whom will flee fast",
+        img: 
     },
     {name: "heal ball",//8
         category: "Comfort",
         price: 15,
-        desc: "a pokeball that fully heals the captured pokemon"
+        desc: "a pokeball that fully heals the captured pokemon",
+        img: 
     },
     {name: "friend ball",//9
         category: "Comfort",
         price: 15,
-        desc: "a pokeball that increases base friendship"
+        desc: "a pokeball that increases base friendship",
+        img: 
     },
     {name: "luxury ball",//10
         category: "Comfort",
         price: 15,
-        desc: "a pokeball that increases rate of friendship gained over time"
+        desc: "a pokeball that increases rate of friendship gained over time",
+        img: 
     },
     {name: "dusk ball",//11
         category: "Environment",
         price: 5,
-        desc: "a pokeball that works better in the dark"
+        desc: "a pokeball that works better in the dark",
+        img: 
     },
     {name: "dive ball",//12
         category: "Environment",
         price: 5,
-        desc: "a pokeball that works better on water or underwater pokemon"
+        desc: "a pokeball that works better on water or underwater pokemon",
+        img: 
     },
     {name: "net ball",//13
         category: "Environment",
         price: 5,
-        desc: "a pokeball that works better on bug and water types"
+        desc: "a pokeball that works better on bug and water types",
+        img: 
     },
     {name: "lure ball",//14
         category: "Environment",
         price: 5,
-        desc: "a pokeball for pokemon caught while fishing"
+        desc: "a pokeball for pokemon caught while fishing",
+        img: 
     },
     {name: "dream ball",//15
         category: "Statistic",
         price: 5,
-        desc: "a pokeball that works better on the drowsy"
+        desc: "a pokeball that works better on the drowsy",
+        img: 
     },
     {name: "nest ball",//16
         category: "Statistic",
         price: 5,
-        desc: "a pokeball that works better on low-level pokemon"
+        desc: "a pokeball that works better on low-level pokemon",
+        img: 
     },
     {name: "level ball",//17
         category: "Statistic",
         price: 5,
-        desc: "a pokeball that works better the higher the level"
+        desc: "a pokeball that works better the higher the level",
+        img: 
     },
     {name: "heavy ball",//18
         category: "Species",
         price: 10,
-        desc: "a pokeball that works better the heavier the pokemon"
+        desc: "a pokeball that works better the heavier the pokemon",
+        img: 
     },
     {name: "repeat ball",//19
         category: "Species",
         price: 10,
-        desc: "a pokeball that works better on species you've caught before"
+        desc: "a pokeball that works better on species you've caught before",
+        img: 
     },
     {name: "beast ball",//20
         category: "Species",
         price: 500,
-        desc: "a pokeball  that works better on ultra-beasts"
+        desc: "a pokeball  that works better on ultra-beasts",
+        img: 
     },
 ]
 const categories ={
@@ -173,6 +193,7 @@ function inject(item){
         <h2 class="category">${item.category}</h2>
         <p class="desc">${item.desc}</p>
         <button class="price">$${item.price}</button>
+        <img src="img/${item.img}" alt=${item.img} />
     </div>`,);
 }
 PokeBalls.forEach(ball=>inject(ball))
