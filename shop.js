@@ -21,103 +21,103 @@ const PokeBalls = [
         category: "Guaranteed",
         price: 1000,
         desc: "a 100% successful pokeball",
-        img: 
+        img: "masterball.webp"
     },
     {name: "quick ball",//5
         category: "Time",
         price: 5,
         desc: "a pokeball that works best as your first move",
-        img: 
+        img: "quickball.webp"
     },
     {name: "timer ball",//6
         category: "Time",
         price: 5,
         desc: "a pokeball that works better the longer the battle",
-        img: 
+        img: "timerball.webp"
     },
     {name: "fast ball",//7
         category: "Time",
         price: 5,
         desc: "a pokeball for pokemon whom will flee fast",
-        img: 
+        img: "fastball.webp"
     },
     {name: "heal ball",//8
         category: "Comfort",
         price: 15,
         desc: "a pokeball that fully heals the captured pokemon",
-        img: 
+        img: "healball.webp"
     },
     {name: "friend ball",//9
         category: "Comfort",
         price: 15,
         desc: "a pokeball that increases base friendship",
-        img: 
+        img: "friendball.webp"
     },
     {name: "luxury ball",//10
         category: "Comfort",
         price: 15,
         desc: "a pokeball that increases rate of friendship gained over time",
-        img: 
+        img: "luxuryball.webp"
     },
     {name: "dusk ball",//11
         category: "Environment",
         price: 5,
         desc: "a pokeball that works better in the dark",
-        img: 
+        img: "duskball.webp"
     },
     {name: "dive ball",//12
         category: "Environment",
         price: 5,
         desc: "a pokeball that works better on water or underwater pokemon",
-        img: 
+        img: "diveball.webp"
     },
     {name: "net ball",//13
         category: "Environment",
         price: 5,
         desc: "a pokeball that works better on bug and water types",
-        img: 
+        img: "netball.webp"
     },
     {name: "lure ball",//14
         category: "Environment",
         price: 5,
         desc: "a pokeball for pokemon caught while fishing",
-        img: 
+        img: "lureball.webp"
     },
     {name: "dream ball",//15
         category: "Statistic",
         price: 5,
         desc: "a pokeball that works better on the drowsy",
-        img: 
+        img: "dreamball.webp"
     },
     {name: "nest ball",//16
         category: "Statistic",
         price: 5,
         desc: "a pokeball that works better on low-level pokemon",
-        img: 
+        img: "nestball.webp"
     },
     {name: "level ball",//17
         category: "Statistic",
         price: 5,
         desc: "a pokeball that works better the higher the level",
-        img: 
+        img: "levelball.webp"
     },
     {name: "heavy ball",//18
         category: "Species",
         price: 10,
         desc: "a pokeball that works better the heavier the pokemon",
-        img: 
+        img: "heavyball.webp"
     },
     {name: "repeat ball",//19
         category: "Species",
         price: 10,
         desc: "a pokeball that works better on species you've caught before",
-        img: 
+        img: "repeatball.webp"
     },
     {name: "beast ball",//20
         category: "Species",
         price: 500,
         desc: "a pokeball  that works better on ultra-beasts",
-        img: 
+        img: "beastball.webp"
     },
 ]
 const categories ={
@@ -193,7 +193,16 @@ function inject(item){
         <h2 class="category">${item.category}</h2>
         <p class="desc">${item.desc}</p>
         <button class="price">$${item.price}</button>
-        <img src="img/${item.img}" alt=${item.img} />
-    </div>`,);
+        <img src="images/${item.img}" alt=${item.img} />
+    </div>`);
 }
 PokeBalls.forEach(ball=>inject(ball))
+
+function inject2(crt){
+    const carts=document.querySelector(".cart")
+    carts.insertAdjacentElement(
+        "beforeend",
+        `<h1>hi</h1>`
+    );
+}
+cart.inject
