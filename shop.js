@@ -157,15 +157,18 @@ class Cart{
     add(item){
     if (this.content[item.name]){
         this.content[item.name]["qty"]++;
+        this.content[item.name]["total"]+=this.content[item.name][price];
     }
     else{
         this.content[item["name"]]=item
         this.content[item["name"]]["qty"]=1
+        this.content[item["name"]]["total"]=this.content[item.name][price];
     }
     }
     sbt(item){
         if (this.content[item.name]){
             this.content[item.name]["qty"]--;
+            this.content[item.name]["total"]-=this.content[item.name][price];
         }
         else{
             console.log("ERROR: Item not found!")
