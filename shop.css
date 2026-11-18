@@ -9,6 +9,14 @@ body
 body {
   background-color: #464646;
 }
+.cart{
+  position: sticky;
+  top: 0;
+  height: 5rem;
+  width: 100%;
+  background-color: red;
+  text-align:left;
+}
 .box {
   height: 15vw;
   width: 100%;
