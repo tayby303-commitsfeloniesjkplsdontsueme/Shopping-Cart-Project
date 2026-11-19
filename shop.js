@@ -162,13 +162,13 @@ class Cart{
     else{
         this.content[item["name"]]=item
         this.content[item["name"]]["qty"]=1
-        this.content[item["name"]]["total"]=this.content[item.name][price];
+        this.content[item["name"]]["total"]=this.content[item.name]["price"];
     }
     }
     sbt(item){
         if (this.content[item.name]){
             this.content[item.name]["qty"]--;
-            this.content[item.name]["total"]-=this.content[item.name][price];
+            this.content[item.name]["total"]-=this.content[item.name]["price"];
         }
         else{
             console.log("ERROR: Item not found!")
@@ -187,7 +187,7 @@ cart.add(PokeBalls[1])
 cart.add(PokeBalls[1])
 cart.show()
 
-function prices(ball){
+/* function prices(ball){
 const price = document.querySelector(".price")
 price.addEventListener("click", cart.add);
 }
@@ -220,3 +220,4 @@ function cject(ball){
 }
 
 cart.forEach(ball=>cject(ball))
+ */
