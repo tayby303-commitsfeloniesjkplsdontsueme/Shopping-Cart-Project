@@ -9,7 +9,7 @@ body
 body {
   background-color: #464646;
 }
-.cart{
+.top{
   position: sticky;
   top: 0;
   height: 5rem;

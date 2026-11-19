@@ -187,10 +187,6 @@ cart.add(PokeBalls[1])
 cart.add(PokeBalls[1])
 cart.show()
 
-/* function prices(ball){
-const price = document.querySelector(".price")
-price.addEventListener("click", cart.add);
-}
 function inject(item){
     const container = document.querySelector(".container");
     container.insertAdjacentHTML(
@@ -202,19 +198,15 @@ function inject(item){
         <button class="price">$${item.price}</button>
         <img src="images/${item.img}" alt=${item.img} />
     </div>`);
-    prices(ball)
 }
-PokeBalls.forEach(ball=>inject(ball))
-
-function rmv(ball){
-const remove = document.querySelector(".remove")
-remove.addEventListener("click",cart.sbt(ball))
-}
-function cject(ball){
+let balls = PokeBalls
+balls.forEach(ball=>inject(ball))
+/* 
+function cject(item){
     const carts=document.querySelector(".cart")
     carts.insertAdjacentElement(
         "beforeend",
-        `<h1 class="name quantity">${ball.name}: ${ball.qty}<button class="remove">Remove</button></h1>`
+        `<h1 class="name quantity">${item.name}: ${item.qty} - $${item.total}<button class="remove">Remove</button></h1>`
     );
     rmv(ball)
 }
