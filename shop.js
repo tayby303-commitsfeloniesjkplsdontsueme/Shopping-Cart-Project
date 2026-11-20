@@ -201,7 +201,7 @@ function inject(item){
 }
 let balls = PokeBalls
 balls.forEach(ball=>inject(ball))
-/* 
+
 function cject(item){
     const carts=document.querySelector(".cart")
     carts.insertAdjacentElement(
@@ -212,4 +212,9 @@ function cject(item){
 }
 
 cart.forEach(ball=>cject(ball))
- */
+document.querySelector("form").addEventListener("submit", function (event) {
+  event.preventDefault();
+  let x = document.querySelector("#coupon");
+  console.log(x.value);
+  x.value = "SEAN-HADLEY";
+});

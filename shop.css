@@ -9,13 +9,17 @@ body
 body {
   background-color: #464646;
 }
-.top{
+.coupon{
   position: sticky;
-  top: 0;
-  height: 5rem;
+  top: 0%;
+  height: 2rem;
   width: 100%;
   background-color: red;
   text-align:left;
+  padding-top:0.375rem;
+}
+.cart{
+  float:left;
 }
 .box {
   height: 15vw;
@@ -30,6 +34,7 @@ body {
 }
 .container {
   display: flex;
+  left: 0;
   width: 100rem;
   flex-wrap: wrap;
   justify-content: space-between;
