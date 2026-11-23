@@ -202,19 +202,21 @@ function inject(item){
 let balls = PokeBalls
 balls.forEach(ball=>inject(ball))
 
-function cject(item){
-    const carts=document.querySelector(".cart")
-    carts.insertAdjacentElement(
-        "beforeend",
-        `<h1 class="name quantity">${item.name}: ${item.qty} - $${item.total}<button class="remove">Remove</button></h1>`
-    );
-    rmv(ball)
+function update(){
+    const qty = document.querySelector(".qty")
+    const ttl = document.querySelector(".ttl")
 }
 
-cart.forEach(ball=>cject(ball))
-document.querySelector("form").addEventListener("submit", function (event) {
-  event.preventDefault();
-  let x = document.querySelector("#coupon");
-  console.log(x.value);
-  x.value = "SEAN-HADLEY";
-});
+function cject(item){
+    const kars = document.querySelector(".cart")
+    kars.insertAdjacentHTML(
+        "beforeend",
+        `<div class="item">
+            <h1 class="name">${item.name}</h1>
+            <h2 class="qty">Amount: ${item.qty}</h2>
+            <h3 class="ttl">$${item.total}</h3>
+        </div>`);
+}
+for (const [item] of Object.entries(cart)) {
+  cject(item);
+}

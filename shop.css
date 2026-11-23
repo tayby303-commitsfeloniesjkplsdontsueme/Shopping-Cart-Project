@@ -18,8 +18,18 @@ body {
   text-align:left;
   padding-top:0.375rem;
 }
+.item{
+  height: 5vw;
+  width: 7%;
+  background-color: bisque;
+}
 .cart{
+  position: fixed;
   float:left;
+  height: 100%;
+  width: 8.75%;
+  justify-content: left;
+  background-color: aqua;
 }
 .box {
   height: 15vw;
@@ -35,7 +45,7 @@ body {
 .container {
   display: flex;
   left: 0;
-  width: 100rem;
+  width: 95rem;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 2rem auto;
@@ -43,6 +53,7 @@ body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 2rem; /* space between items */
+  float: right;
 }
 .name {
   font-family: "Balthazar", serif;
