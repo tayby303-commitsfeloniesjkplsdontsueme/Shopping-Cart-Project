@@ -205,18 +205,20 @@ balls.forEach(ball=>inject(ball))
 function update(){
     const qty = document.querySelector(".qty")
     const ttl = document.querySelector(".ttl")
+    qty.textContent = `Amount: ${.qty}`
 }
 
 function cject(item){
     const kars = document.querySelector(".cart")
     kars.insertAdjacentHTML(
         "beforeend",
-        `<div class="item">
-            <h1 class="name">${item.name}</h1>
-            <h2 class="qty">Amount: ${item.qty}</h2>
-            <h3 class="ttl">$${item.total}</h3>
+        `<div class="item" >
+            <h3 class="name"></h3>
+            <p class="qty">$</p>
+            <p class="ttl"></p>
+            <button class="remove">$</button>
         </div>`);
 }
-for (const [item] of Object.entries(cart)) {
-  cject(item);
-}
+Object.keys(cart).forEach(ball => {
+    console.log(`Name: ${ball.name}, Price: $${ball.ttl}`);
+});
