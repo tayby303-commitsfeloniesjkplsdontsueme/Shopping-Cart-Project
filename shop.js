@@ -202,23 +202,24 @@ function inject(item){
 let balls = PokeBalls
 balls.forEach(ball=>inject(ball))
 
-function update(){
-    const qty = document.querySelector(".qty")
-    const ttl = document.querySelector(".ttl")
-    qty.textContent = `Amount: ${.qty}`
-}
+const cost = document.querySelectorAll(".price")
+    cost.addEventListener("click",cart.add(PokeBalls[0]))
 
+function amount(item){
+        const qty = document.querySelector(".qty")
+        const ttl = document.querySelector(".ttl")
+        qty.textContent = `Amount: ${item.qty}`
+        ttl.textContent = `Total Cost: $${item.ttl}`
+}
 function cject(item){
     const kars = document.querySelector(".cart")
-    kars.insertAdjacentHTML(
+    Object.keys(this).forEach(item => {kars.insertAdjacentHTML(
         "beforeend",
         `<div class="item" >
-            <h3 class="name"></h3>
-            <p class="qty">$</p>
-            <p class="ttl"></p>
+            <h3 class="name">${item.name}</h3>
+            <p class="qty">${item.qty}</p>
+            <p class="ttl">$${item.ttl}</p>
             <button class="remove">$</button>
-        </div>`);
+        </div>`)});
+    amount(item);
 }
-Object.keys(cart).forEach(ball => {
-    console.log(`Name: ${ball.name}, Price: $${ball.ttl}`);
-});
