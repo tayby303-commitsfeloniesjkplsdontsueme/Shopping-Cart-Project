@@ -212,7 +212,7 @@ function cject(item){
     const kars = document.querySelector(".cart")
     Object.keys(this).forEach(item => {kars.insertAdjacentHTML(
         "beforeend",
-        `<div class="item" >
+        `<div class="item">
             <h3 class="name">${item.name}</h3>
             <p class="qty">${item.qty}</p>
             <p class="ttl">$${item.ttl}</p>
@@ -221,7 +221,7 @@ function cject(item){
     amount(item);
 }
 const bx = document.querySelectorAll(".box");
-bx.addEventListener("click",cject(cart["poke ball"]));
-/* Object.keys(cart).forEach(key => {
+bx.addEventListener("click",cject(cart["great ball"]));
+Object.keys(cart).forEach(key => {
   console.log(`${key}: ${cart[key]}`);
-}); */
+});
