@@ -183,27 +183,24 @@ class Cart{
 const cart = new Cart();
 const cart2 = new Cart();
 
-cart.add(PokeBalls[1])
-cart.add(PokeBalls[1])
-cart.show()
+cart.add(PokeBalls[1]);
+cart.add(PokeBalls[1]);
+cart.show();
 
 function inject(item){
     const container = document.querySelector(".container");
     container.insertAdjacentHTML(
     "beforeend",
-    `<div class="box">
+    `<button class="box">
         <h1 class="name">${item.name}</h1>
         <h2 class="category">${item.category}</h2>
         <p class="desc">${item.desc}</p>
-        <button class="price">$${item.price}</button>
-        <img src="images/${item.img}" alt=${item.img} />
-    </div>`);
+        <div class="price">$${item.price}</div>
+        <img class="img" src="images/${item.img}" alt=${item.img} />
+    </button>`);
 }
-let balls = PokeBalls
-balls.forEach(ball=>inject(ball))
-
-const cost = document.querySelectorAll(".price")
-    cost.addEventListener("click",cart.add(PokeBalls[0]))
+let balls = PokeBalls;
+balls.forEach(ball=>inject(ball));
 
 function amount(item){
         const qty = document.querySelector(".qty")
@@ -223,3 +220,8 @@ function cject(item){
         </div>`)});
     amount(item);
 }
+const bx = document.querySelectorAll(".box");
+bx.addEventListener("click",cject(cart["poke ball"]));
+/* Object.keys(cart).forEach(key => {
+  console.log(`${key}: ${cart[key]}`);
+}); */
