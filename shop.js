@@ -240,7 +240,8 @@ function cont(kate){
     const balls = kate;
     balls.forEach(ball=>inject(ball));
 }
-cont(PokeBalls)
+// cont(PokeBalls)
+PokeBalls.forEach(ball=>inject(ball));
 /* 
 const pk = document.querySelector(".pk")
 const st = document.querySelector(".st")
